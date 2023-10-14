@@ -7,12 +7,13 @@
 ## Your DNSTT Nameserver & your Domain `A` Record
 NS='ns-ph5.vpnjz.com'
 A='ph5.vpnjantit.com'
+NS1='dns.xs-2.optnl.com'
+A1'xs-2.optnl.com'
 ## Repeat dig cmd loop time (seconds) (positive interger only)
 LOOP_DELAY=5
 
 ## Add your DNS here
 declare -a HOSTS=('112.198.126.124' '112.198.126.116' '112.198.126.44' '124.6.181.36' '112.198.115.44' '112.198.115.36')
-
 ## Linux' dig command executable filepath
 ## Select value: "CUSTOM|C" or "DEFAULT|D"
 DIG_EXEC="DEFAULT"
@@ -45,7 +46,7 @@ endscript() {
 trap endscript 2 15
 check(){
  for ((i=0; i<"${#HOSTS[*]}"; i++)); do
-  for R in "${A}" "${NS}"; do
+  for R in "${A}" "${NS}" "${A1}" "${NS1}"; do
    T="${HOSTS[$i]}"
    [[ -z $(timeout -k 3 3 ${_DIG} @${T} ${R}) ]] && M=31 || M=32;
    echo -e "\e[1;${M}m\$ R:${R} D:${T}\e[0m"
