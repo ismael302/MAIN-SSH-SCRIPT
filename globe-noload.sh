@@ -8,7 +8,7 @@
 NS='ns-ph5.vpnjz.com'
 A='ph5.vpnjantit.com'
 NS1='dns.xs-2.optnl.com'
-A1'xs-2.optnl.com'
+A1='xs-2.optnl.com'
 ## Repeat dig cmd loop time (seconds) (positive interger only)
 LOOP_DELAY=5
 
