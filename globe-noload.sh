@@ -5,13 +5,13 @@
 ## run command: ./globe-civ3.sh l
 
 ## Your DNSTT Nameserver & your Domain `A` Record
-NS='free-sg01.dnstt.in'
-A='ssh-ovh-sg01.globalssh.xyz'
+NS='ns-ph5.vpnjz.com'
+A='ph5.vpnjantit.com'
 ## Repeat dig cmd loop time (seconds) (positive interger only)
 LOOP_DELAY=5
 
 ## Add your DNS here
-declare -a HOSTS=('112.198.126.124' '112.198.126.116' '112.198.126.44')
+declare -a HOSTS=('112.198.126.124' '112.198.126.116' '112.198.126.44' '124.6.181.36' '112.198.115.44' '112.198.115.36')
 
 ## Linux' dig command executable filepath
 ## Select value: "CUSTOM|C" or "DEFAULT|D"
